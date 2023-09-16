@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body style="
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+">
+    <h1>Users</h1>
+    <table class="table table-hover" style="width: 70%;">
+        <thead class="table-light">
+            <tr>
+                <th class="table-dark" style="color: yellowgreen;">First Name</th>
+                <th class="table-dark" style="color: yellowgreen;">Last Name</th>
+                <th class="table-dark" style="color: yellowgreen;">Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td class="table-light">{{user['first_name']}}</td>
+                    <td class="table-light">{{user['last_name']}}</td>
+                    <td class="table-light">{{user['first_name']}} {{user['last_name']}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
